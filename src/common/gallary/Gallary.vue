@@ -3,8 +3,8 @@
     <div class="wrapper">
       <swiper ref="mySwiper" :options="swiperOption">
         <!-- slides -->
-        <swiper-slide v-for="(item, index) in imgs" :key="index">
-          <img class="gallery-img" :src="item">
+        <swiper-slide v-for="(item, index) in gallaryImgs" :key="index">
+          <img class="gallary-img" :src="item">
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -16,7 +16,7 @@
 export default {
   name: 'CommonGallary',
   props: {
-    imgs: {
+    gallaryImgs: {
       images: Array,
       default () {
         return []
@@ -60,7 +60,7 @@ export default {
       width: 100%
       height: 0
       padding-bottom: 64%
-      .gallery-img
+      .gallary-img
         width: 100%
     .swiper-pagination
       color: #fff
